@@ -1,0 +1,123 @@
+@-webkit-keyframes spin {
+  0% {-webkit-transform: rotateX(0deg)
+rotateY(0deg) rotateZ(0deg);
+  }
+  33% {-webkit-transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg);
+  }
+  66% {-webkit-transform: rotateX(0deg) rotateY(240deg) rotateZ(0deg);
+  }
+  100% {-webkit-transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg);
+  }
+}
+
+#logo div{
+	width: 5px;
+	height: 5px;
+	background: transparen;
+	box-shadow: 24px 138px #518b41,30px 138px #518b41,36px 138px #518b41,42px 138px #518b41,42px 132px #518b41,30px 132px #518b41,24px 126px #518b41,24px 132px #518b41,30px 126px #518b41,36px 132px #518b41,42px 126px #518b41,42px 120px #518b41,42px 114px #518b41,24px 114px #518b41,36px 114px #518b41,30px 114px #518b41,24px 108px #518b41,30px 108px #518b41,24px 102px #518b41,30px 102px #518b41,36px 102px #518b41,42px 102px #518b41,48px 102px #518b41,54px 126px #518b41,60px 126px #518b41,54px 102px #518b41,60px 102px #518b41,48px 114px #518b41,54px 114px #518b41,66px 108px #518b41,66px 120px #518b41,66px 114px #518b41,54px 132px #518b41,72px 114px #518b41,78px 108px #518b41,72px 102px #518b41,72px 96px #518b41,48px 96px #518b41,48px 90px #518b41,54px 90px #518b41,60px 90px #518b41,66px 90px #518b41,66px 96px #518b41,78px 102px #518b41,84px 102px #518b41,84px 96px #518b41,90px 96px #518b41,90px 90px #518b41,96px 90px #518b41,102px 90px #518b41,108px 90px #518b41,108px 96px #518b41,84px 114px #518b41,90px 108px #518b41,96px 102px #518b41,78px 126px #518b41,78px 120px #518b41,72px 126px #518b41,84px 126px #518b41,72px 132px #518b41,84px 132px #518b41,48px 144px #518b41,54px 144px #518b41,60px 144px #518b41,66px 138px #518b41,66px 132px #518b41,90px 132px #518b41,90px 138px #518b41,96px 144px #518b41,102px 144px #518b41,108px 144px #518b41,108px 102px #518b41,108px 108px #518b41,108px 114px #518b41,108px 120px #518b41,114px 120px #518b41,120px 126px #518b41,126px 126px #518b41,120px 114px #518b41,126px 114px #518b41,132px 114px #518b41,138px 120px #518b41,138px 132px #518b41,138px 126px #518b41,138px 108px #518b41,132px 102px #518b41,114px 102px #518b41,120px 102px #518b41,126px 102px #518b41,114px 138px #518b41,114px 132px #518b41,108px 132px #518b41,102px 132px #518b41,96px 126px #518b41,90px 120px #518b41,90px 114px #518b41,120px 138px #518b41,132px 138px #518b41,126px 138px #518b41;
+}
+
+body {
+  padding: 1px;
+  margin: 0px;
+  background-color: black;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  overflow: hidden;
+}
+
+#hive {
+  position: relative;
+  margin: 50px auto;
+  width: 567px;
+  height: 599px;
+}
+
+.hex span{
+  position:absolute;
+  left:12.5px;
+  top:55px;
+  display:block;
+  text-align:center;
+  vertical-align:top;
+  line-height:84px;
+  height:90px;
+  width:90px;
+  z-index:100000;
+  pointer-events:none;
+}
+.hex {
+  word-break: break-all;
+  color: aqua;
+  height: 200px;
+  width: 115px;
+  display: inline-block;
+  position: relative;
+  background-color: transparent;
+  margin: 0px -1px -4px 54px;
+  border-top: solid 1px aqua;
+  border-bottom: solid 1px aqua;
+  box-sizing: border-box;
+  border-radius: 2px;
+  box-shadow: inset 0px 20px 20px -20px aqua, inset 0px -20px 20px -20px aqua;
+  padding-top: 50px;
+  cursor:pointer;
+  transform-style:preserve-3d;
+  font-size:90px;
+  transition: all .1s ease-in-out;
+}
+
+.hex:hover {
+  transform: scale(1.25,1.25) rotateY(5deg)  rotateX(-5deg);
+  animation-fill-mode: forwards;
+  background-color:black;
+  z-index:1000;
+}
+
+.hex:hover:after,
+.hex:hover:before{
+  background-color:black;
+}
+
+
+.hex:first-child,
+.hex:nth-child(3),
+.hex:nth-child(4),
+.hex:nth-child(6) {
+  top: 100px;
+}
+
+.hex:last-child {
+  margin: 0px 226px;
+}
+
+.hex:before,
+.hex:after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  transform-origin: center center;
+  background-color: inherit;
+  border-top: inherit;
+  border-bottom: inherit;
+  box-sizing: inherit;
+  border-radius: inherit;
+  box-shadow: inherit;
+}
+
+.hex:before {
+  transform: rotateZ(60deg);
+  z-index: 10;
+}
+
+.hex:after {
+  transform: rotateZ(-60deg);
+  z-index: 15;
+}
